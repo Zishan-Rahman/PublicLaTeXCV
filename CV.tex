@@ -8,16 +8,26 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-\usepackage[scale=0.915]{geometry} % Page margins
+\usepackage[scale=0.97]{geometry} % Page margins
 
 %% Personal Info
 \name{Zishan}{Rahman}
-\title{Curriculum Vitae}
+%\title{Curriculum Vitae}
 \email{zishanfrahman@outlook.com}
 \homepage{zishan-rahman.github.io}
-\extrainfo{Additional references (i.e. personal and academic) available upon request}
+\social[linkedin]{zishan-rahman-6b0769210}
+\social[github]{Zishan-Rahman} 
+%\extrainfo{Additional references (i.e. personal and academic) available upon request}
 
-\quote{I consider myself both ambitious and pragmatic, as I'm constantly thinking of new ideas, always eager to learn new things and skills, and use well-known technologies and reliable methods to achieve my goals.}
+%\quote{I consider myself both ambitious and pragmatic, as I'm constantly thinking of new ideas, always eager to learn new things and skills, and use well-known technologies and reliable methods to achieve my goals. In my software engineering career, I aim to hone my existing skills, and obtain new ones, in professional environments.}
+\quote{I am a committed software developer and enthusiast who is capable of accquiring new skills in software engineering and related areas, as well as adapting to different work environments and teams.}
+
+% Source: https://tex.stackexchange.com/a/227458
+\usepackage{xpatch}
+\xpatchcmd{\maketitle}
+{\\[2.5em]}
+{\\[10pt]} % or whatever: space above the quote
+{}{}
 
 % Source for the below lines (before the beginning of the document): https://tex.stackexchange.com/a/247503
 \let\originalrecomputecvlengths\recomputecvlengths
@@ -29,37 +39,38 @@
 	\makecvtitle
 	
 	\section{Education}
-	\cventry{2020-2023}{Computer Science BSc}{King's College London, University of London}{London, England}{\textit{Recently Graduated}}{Awarded a ``First Class with Honours" certification}
-	\cventry{2018-2020}{A-Levels}{Ilford County High School}{London, England}{\textit{AAB}}{A in Computer Science, A in Politics, B in Mathematics}
-	\cventry{2013-2018}{GCSEs}{Seven Kings High School}{London, England}{\textit{Six 9s, Two 8s, One 7, One 6}}{9 in English Literature, Mathematics, Double Science (two 9s), Further Mathematics and Sociology (old-style A*). 8 in French and Computer Science. 7 in Music. 6 in English Language.}
+	\cventry{2020-2023}{Computer Science BSc}{King's College London, University of London}{London, England}{First Class with Honours}{}
+	\cventry{2018-2020}{A-Levels}{Ilford County High School}{London, England}{A in Computer Science, A in Politics, B in Mathematics}{}
+	%\cventry{2013-2018}{GCSEs}{Seven Kings High School}{London, England}{\textit{Six 9s, Two 8s, One 7, One 6}}{9 in English Literature, Mathematics, Double Science (two 9s), Further Mathematics and Sociology (old-style A*). 8 in French and Computer Science. 7 in Music. 6 in English Language.}
 	
-	\section{Languages}
-	\cvitem{English}{Native Speaker}
-	\cvitem{Bengali}{Basic Vocabulary}
+	\section{Projects}
+	\cventry{2022}{Group Member}{Bookwise}{Ctrl Intelligence}{}{Used Django (Python) and Bootstrap (HTML5) to develop a book club manager website with an AI recommender system included. Registered users can create and join clubs, create posts and set club meetings. Wrote unit tests and ensured optimal code coverage. Deployed website myself with Heroku on my own premises. Oversaw administration of group code repository, PRs and code reviews.}
+	\cventry{2023}{Dissertation Author}{Implementing Procedural Content Generation Algorithms in a Tile Map RPG in the Godot Game Engine}{}{}{Wrote implementations of L-System, Simplex Noise, Poisson Disk Distribution and Voronoi Cell algorithms for placing tiles on a 1000+ cell grid for a playable Godot 4 game. Compared each implementation in terms of time taken and how well it integrated with the RPG scenario.}
 	
-	\section{Computer Languages}
-	\cvitemwithcomment{Python}{Highly Experienced (built coursework projects with Tkinter and Django)}{7+ years}
-	\cvitemwithcomment{SQL}{Highly Experienced (interacted with SQLite and MySQL/MariaDB in several coursework projects)}{5+ years}
-	\cvitemwithcomment{GDScript}{Highly Experienced (language used in Godot game engine, made 2 released games)}{2+ years}
-	\cvitemwithcomment{Java}{Well Experienced (taught in Programming Practice and Applications module in $1^{st}$ year)}{3+ years}
-	\cvitemwithcomment{Scala}{Quite Experienced (taught in Practical Experiences in Programming module in $2^{nd}$ year)}{2+ years}
-	\cvitemwithcomment{C/C++}{Novice/Beginner (taught in Practical Experiences in Programming module in $2^{nd}$ year)}{2+ years}
-	\cvitemwithcomment{Lua}{Novice/Beginner (some basic knowledge, self-learnt)}{2+ years}
-	\cvitemwithcomment{HTML5}{Novice/Beginner (built website in Django for second-year group coursework project)}{2+ years}
-	\cvitemwithcomment{JavaScript}{Novice/Beginner (taught in Internet Systems module in $2^{nd}$ year)}{2+ years}
-	\cvitemwithcomment{\LaTeX}{Novice/Beginner (recently learnt \LaTeX{} to write this CV document)}{2+ years}
+	\section{Technologies}
+	\cvitemwithcomment{Python}{Built coursework projects with Tkinter and Django}{Advanced}
+	\cvitemwithcomment{SQL}{Interacted with SQLite and MySQL/MariaDB in several coursework projects}{Proficient}
+	\cvitemwithcomment{GDScript}{Language used in Godot Engine, made 2 released games, dissertation revolves around it}{Proficient}
+	\cvitemwithcomment{Java}{Studied in ``Programming Practice and Applications" in $1^{st}$ year}{Proficient}
+	\cvitemwithcomment{C/C++}{Studied in ``Practical Experiences in Programming" in $2^{nd}$ year}{Beginner}
+	\cvitemwithcomment{Scala}{Studied in ``Practical Experiences in Programming" and ``Compilers and Formal Languages" (in $3^{rd}$ year)}{Familiar}
+	\cvitemwithcomment{HTML5}{Built website in Django for second-year group coursework project}{Familiar}
+	\cvitemwithcomment{JavaScript}{Studied in ``Internet Systems" in $2^{nd}$ year}{Beginner}
+	\cvitemwithcomment{\LaTeX}{Learnt \LaTeX{} to write this CV and other documents}{Familiar}
+	\cvitemwithcomment{Linux}{Use Linux Mint Cinnamon as Daily Driver, Some Working Knowledge of Terminal}{Proficient}
+	\cvitemwithcomment{Flatpak}{Worked with repositories on Flathub's GitHub}{Familiar}
 	
 	\section{Other Skills}
-	\cvitemwithcomment{Linux}{Use Linux Mint Cinnamon as Daily Driver, Some Working Knowledge of Terminal}{Nearly 2 Years}
-	\cvitem{Problem Solving}{Highly Experienced}
-	\cvitem{Time Management}{Highly Experienced}
-	\cvitem{Teamwork}{Highly Experienced}
-    \cvitem{Public Speaking}{Mildly Experienced}
-    \cvitem{Writing}{Well Exprienced}
+	\cvitem{Problem Solving}{Highly Experienced (used problem solving approaches in software development and coding)}
+	\cvitem{Time Management}{Highly Experienced (worked with deadlines both solo and in teams)}
+	\cvitem{Teamwork}{Highly Experienced (worked with group of 10 to develop a website using Django and Python)}
+	\cvitem{Public Speaking}{Mildly Experienced (did several talks and presentations at school)}
+	\cvitem{Writing}{Well Exprienced (blog posts for my personal website)}
+	\cvitem{English}{Native Speaker}
+	\cvitem{Bengali}{Basic Speaking Vocabulary}
 
 	\section{Hobbies}
 	\cvitem{Gaming}{Playing Video and Tabletop Games, Also Making Video Games with The Godot Game Engine}
-	\cvitem{Music}{Listening to Music, Also Making It With Cakewalk by BandLab and Ardour}
-	\cvitem{Browsing the Internet}{Reading Wikipedia Articles, Watching YouTube Videos et cetera}
+	\cvitem{Music}{Listening to Music, Also Making and Producing It With Cakewalk by BandLab, Ardour and LMMS}
 
 \end{document}
